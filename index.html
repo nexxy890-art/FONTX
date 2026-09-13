@@ -1,1 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="description" content="Generate 300+ unique fancy text styles, symbols and Unicode decorations instantly with FONTX. Zero backend, fast local Unicode engine.">
+  <meta name="keywords" content="FONTX, Unicode Generator, Fancy Text, Symbols, Free Fire Nickname Generator, PUBG Names, Stylish Fonts">
+  <meta name="author" content="FONTX Engine">
+  <title>FONTX — 300+ Fancy Text Generator & Symbol Vault</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+  <!-- SUBTLE BACKGROUND GRID -->
+  <div class="bg-grid"></div>
+
+  <!-- INTRO SCANLINE ANIMATION OVERLAY -->
+  <div id="intro-overlay">
+    <div class="scan-line"></div>
+    <div class="intro-logo">FONTX</div>
+  </div>
+
+  <!-- MAIN APP WRAPPER -->
+  <div class="app-container">
+
+    <!-- TOP BAR -->
+    <header class="top-bar">
+      <div class="badge-live">
+        <span class="dot-blink"></span>
+        <span>V2.3 LIVE</span>
+      </div>
+      <div class="brand-logo">FONTX</div>
+      <div class="top-right-meta">LOCAL ENGINE / 300+</div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero-section">
+      <div class="hero-tag">ZERO API / ZERO BACKEND</div>
+      <h1 class="hero-heading">
+        Make ordinary text<br>
+        <span class="text-outline">unordinary.</span>
+      </h1>
+      <p class="hero-desc">
+        Enter anything. Explore hundreds of Unicode styles, symbols and decorations — generated directly in your browser.
+      </p>
+    </section>
+
+    <!-- CONCEPT INFORMATION BOXES -->
+    <section class="concept-grid">
+      <div class="concept-box">
+        <div class="box-num">01 — HOW IT WORKS</div>
+        <div class="box-title">INSTANT GENERATION</div>
+        <div class="box-desc">Type your text → Search → Explore styles → Copy with one tap.</div>
+      </div>
+      <div class="concept-box">
+        <div class="box-num">02 — ZERO NETWORK</div>
+        <div class="box-title">100% PRIVATE & OFFLINE</div>
+        <div class="box-desc">No API calls and no backend. Runs locally inside your browser engine.</div>
+      </div>
+      <div class="concept-box">
+        <div class="box-num">03 — FAST ENGINE</div>
+        <div class="box-title">LIGHTWEIGHT BATCHING</div>
+        <div class="box-desc">300+ styles generated with batch DOM rendering for low-end devices.</div>
+      </div>
+      <div class="concept-box">
+        <div class="box-num">04 — YOUR FAVOURITES</div>
+        <div class="box-title">LOCAL STORAGE</div>
+        <div class="box-desc">Save your favourite unicode combinations locally across sessions.</div>
+      </div>
+    </section>
+
+    <!-- TEXT LAB / GENERATOR SECTION -->
+    <section class="lab-section">
+      <div class="lab-header">
+        <div class="lab-title-group">
+          <span class="lab-title">TEXT LAB</span>
+        </div>
+        <div class="lab-status">
+          <span class="dot-blink"></span>
+          <span>READY</span>
+        </div>
+      </div>
+
+      <div class="input-container">
+        <div class="input-label-row">
+          <label for="text-input">ENTER TEXT</label>
+          <span id="char-counter">0/120</span>
+        </div>
+        <input 
+          type="text" 
+          id="text-input" 
+          class="custom-input" 
+          placeholder="FreeFire" 
+          maxlength="120"
+          autocomplete="off"
+          spellcheck="false"
+        >
+      </div>
+
+      <div class="button-group">
+        <button id="btn-search" class="btn btn-primary">SEARCH ↗</button>
+        <button id="btn-reset" class="btn">↻ RESET</button>
+        <button id="btn-random" class="btn" disabled>✦ RANDOM</button>
+      </div>
+    </section>
+
+    <!-- RESULT AREA -->
+    <section class="results-section">
+      <div class="results-header">
+        <div id="results-count" class="results-count">0 RESULTS</div>
+        <div class="results-count">UNICODE / LOCAL</div>
+      </div>
+
+      <div id="results-grid" class="results-grid"></div>
+
+      <div id="loadmore-wrap" class="load-more-wrap" style="display: none;">
+        <button id="btn-loadmore" class="btn">LOAD MORE ↓</button>
+      </div>
+    </section>
+
+    <!-- SYMBOL VAULT SECTION -->
+    <section class="vault-section">
+      <div class="vault-header">
+        <h2 class="vault-title">SYMBOL VAULT</h2>
+        <p class="hero-desc" style="text-align: left; margin: 0; font-size: 0.85rem;">
+          Find your mark. Click any symbol to copy instantly to your clipboard.
+        </p>
+      </div>
+
+      <div class="vault-tabs">
+        <button class="tab-btn active" data-cat="ALL">ALL</button>
+        <button class="tab-btn" data-cat="GAMING">GAMING</button>
+        <button class="tab-btn" data-cat="AESTHETIC">AESTHETIC</button>
+        <button class="tab-btn" data-cat="ARROWS">ARROWS</button>
+        <button class="tab-btn" data-cat="HEARTS">HEARTS</button>
+        <button class="tab-btn" data-cat="STARS">STARS</button>
+      </div>
+
+      <div id="symbol-grid" class="symbol-grid"></div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="app-footer">
+      <div>FONTX / V2.3</div>
+      <div>BUILT TO RUN LOCALLY</div>
+    </footer>
+
+  </div>
+
+  <!-- TOAST NOTICE -->
+  <div id="toast-notice" class="toast-notice">COPIED TO CLIPBOARD</div>
+
+  <!-- SCRIPTS -->
+  <script src="fonts.js"></script>
+  <script src="script.js"></script>
+</body>
+  </html>
+          
